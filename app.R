@@ -17,13 +17,13 @@ ui <- fluidPage(
       tags$h2("Overview & Its Importance:"),
       tags$p(
         "The data analyzed in this project is sourced from the New York State Government School Attendance and Diversity Report, covering the years 2018 to 2022. This dataset offers a comprehensive examination of class attendance and identity factors, 
-        providing a lens into the intricate web of influences shaping students' academic journeys.",
-        "Acknowledging the influence of demographic and social factors on academic performance is crucial. According to the 2012 student achievement factors published by the Department of Education (",
+        providing a lens into the influences shaping students' academic journeys.",
+        "Acknowledging the influence of demographic and social factors on academic performance is essential. According to the 2012 student achievement factors published by the Department of Education (",
         tags$a(href = "https://files.eric.ed.gov/fulltext/ED568687.pdf", "source"),
         ").", "Understanding the determinants of academic success is crucial, and this dataset delves into critical facets such as social and moral development, developmental differences, readiness for skill development, and socioeconomic disparities. 
-        In aligning with the insights shared by the Department of Education in their 2012 publication on student achievement factors, our exploration aims to unravel the intricate interplay of these elements. 
+        In aligning with the insights shared by the Department of Education in their 2012 publication on student achievement factors, our exploration aims to unravel the interplay of these elements. 
         Our goal is to equip educators, policymakers, and parents, with the insights necessary to craft more nuanced and effective education plans for students. 
-        Moreover, the analysis serves as a powerful tool to identify pain points, particularly in underfunded school districts, providing a roadmap for targeted interventions and resource allocations."
+        Moreover, the analysis plans to serve as a useful tool to identify pain points, particularly in underfunded school districts, providing a roadmap for targeted interventions and resource allocations."
       )
     ),
     br(),
@@ -72,10 +72,10 @@ ui <- fluidPage(
       ),
       tags$h3("Takeaways:"),
       tags$p(
-        "A key takeaway from our analysis is the recognition that a holistic approach, integrating both data and research, is crucial for identifying and implementing successful interventions. 
+        "A key takeaway from our analysis is our approach in identifying correlations, integrating both data and research, is crucial for identifying and implementing successful interventions. 
         This acknowledgement underscores the significance of leveraging comprehensive information to tailor effective strategies that cater to the individual needs of students. 
-        The amalgamation of data-driven insights and informed research equips educators and policymakers with the tools needed to create targeted interventions, fostering an educational environment where every child has the opportunity to thrive.
-        From our research, a notable observation emerged, revealing that students grappling with disabilities, homelessness, and financial hardship exhibit lower attendance rates compared to their counterparts who do not face these challenges. 
+        The combination of data-driven insights and informed research equips educators and policymakers with the tools needed to create targeted interventions, fostering an educational environment where every child has the opportunity to thrive.
+        From our research, an observation emerged, revealing that students grappling with disabilities, homelessness, and financial hardship exhibit lower attendance rates compared to their counterparts who do not face these challenges. 
         This stark contrast underscores the profound impact of socio-economic factors and diverse life circumstances on students' ability to regularly attend school."
       ),
       tags$h3("Data Information:"),
@@ -112,7 +112,7 @@ server <- function(input, output) {
         geom_point(size = 3, alpha = 0.7) +
         labs(title = paste("Scatter Plot for", input$column_selector),
              x = input$column_selector,
-             y = "Attendance Rata 2021 - 2022")+
+             y = "Attendance Rate 2021 - 2022")+
     theme_minimal() +  
     theme(
       text = element_text(family = "Arial", color = "darkblue", size = 14),
